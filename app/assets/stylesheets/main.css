@@ -134,7 +134,6 @@ fieldset[disabled] .btn-primary.active {
     border: 0px solid #f1c633;
     border-radius: 10px;
     color: #e2e2e2;
-    box-shadow: -15px 30px 7px #c2c2c2;
     border: 1px solid #eee;
 }
 .btn-xl:hover,
@@ -309,7 +308,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('sydney.png');
+    background-image: url('sydney.jpg');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -348,20 +347,16 @@ header .intro-text .intro-heading {
 
     header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 40px;
     font-style: italic;
     line-height: 40px;
-    text-shadow: -15px 30px 7px #c2c2c2;
     }
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
         font-size: 75px;
         font-weight: 700;
         line-height: 75px;
-        text-shadow: -15px 30px 7px #c2c2c2;
     }
 }
 
@@ -718,12 +713,10 @@ ul.social-buttons li a:active {
 }
 
 ::-moz-selection {
-    text-shadow: none;
     background: #fed136;
 }
 
 ::selection {
-    text-shadow: none;
     background: #fed136;
 }
 

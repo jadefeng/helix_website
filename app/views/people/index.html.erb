@@ -6,12 +6,19 @@
   </div>
 </header>
 
+<h1>Crazy javascript in and out will happen here.</h1>
     <% @people.each do |person| %>
       <div class="person_box">
         <div class="container">
           <img src="<%= person.image %>" class="profilePic">
           <h3><%= person.name %></h3>
           <p><%= person.description %></p>
+
+          <ul class="list-inline social-buttons">
+            <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a> </li>
+          </ul>
+
         </div>
       </div>
     <% end %>

@@ -27,13 +27,37 @@
 }
 
 
-section {
-  height: 60vh;
+.project_box {
+  width: 40vw;
+  height: 300px;
+  margin: 0 auto;
+  display: inline-table;
+  background-size: cover;
+  margin: 10px;
 }
+
+.project_box h2 {
+  color: #fec503;
+  text-align: center;
+  bottom: 0;
+}
+
+.project_logo {
+  width: 250px;
+  height: 200px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 
 .person_box {
   width: 100%;
-  height: 250px;
+  height: 300px;
   text-align: center;
   margin-top: 10px
 }

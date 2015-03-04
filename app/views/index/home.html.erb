@@ -36,8 +36,37 @@
   </div>
 </section>
 
-<section>
-	
 
+<section id="team" class="bg-light-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <a href="/people"><h2 class="section-heading">Team</h2></a>
+        <div class="line"></div>
+      </div>
+    </div>
+    <% @people.each do |person| %>
+      <div class="col-sm-3">
+        <div class="team-member"> <img src="<%= person.image %>" class="img-responsive img-circle" alt="">
+          <h4><%= person.name %></h4>
+          <ul class="list-inline social-buttons">
+            <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a> </li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
 
+<section id="clients">
+  <div class="container">
+      <div class="col-lg-12 text-center">
+        <a href="/projects"><h2 class="section-heading">Portfolio</h2></a>
+        <div class="line"></div>
+    </div>
+    <% @projects.each do |project| %>
+        <img src="<%= project.image %>" class="project_logo">
+    <% end %>
+  </div>  
 </section>
