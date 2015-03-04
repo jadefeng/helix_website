@@ -9,19 +9,23 @@
 Person.create(
   name: 'DANIEL DANILATOS',
   description: 'Blah blah blah blah Lorem Ipsum blah description blah blah',
+  image: 'http://www.helixta.com.au/assets/Images/people/SeaLion.jpg'
   )
 
 Person.create(
   name: 'TIM CEREXHE',
   description: 'Blah blah blah blah Lorem Ipsum blah description blah blah',
+  image: 'http://www.helixta.com.au/assets/Images/people/tim.jpg'
   )
 
 Person.create(
   name: 'JEEVA SURESH',
   description: 'Blah blah blah blah Lorem Ipsum blah description blah blah',
+  image: 'http://www.helixta.com.au/assets/Images/people/jeeva.jpg'
   )
 
 Person.create(
   name: 'JADE FENG',
   description: 'Blah blah blah blah Lorem Ipsum blah description blah blah',
+  image: 'http://www.helixta.com.au/assets/Images/people/jade.jpg'
   )

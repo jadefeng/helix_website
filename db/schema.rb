@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20150304065404) do
   create_table "people", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
+    t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
