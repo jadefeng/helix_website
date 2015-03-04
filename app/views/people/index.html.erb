@@ -1,0 +1,20 @@
+<header>
+  <div class="container">
+    <div class="intro-text">
+      <h1>The Team</h1>
+      </div>
+  </div>
+</header>
+
+
+
+    <% @people.each do |person| %>
+      <div class="person_box">
+        <h3><%= person.name %></h3>
+        <p><%= person.description %></p>
+      </div>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Person', new_person_path %>
