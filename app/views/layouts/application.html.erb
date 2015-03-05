@@ -20,6 +20,8 @@
         <li> <a class="page-scroll" href="/people">People</a> </li>
         <li> <a class="page-scroll" href="/about">About</a> </li>
         <li> <a class="page-scroll" href="/contact">Contact</a> </li>
+        <li>  <%= link_to('Sign out', login_path, :method => :delete, :data => {:confirm => "Are you sure?"})  %></li> " 
+
       </ul>
   </div>
   <!-- /.container-fluid --> 
