@@ -5,18 +5,21 @@
       </div>
   </div>
 </header>
-
+<br><br>
     <% @people.each do |person| %>
       <div class="person_box">
         <div class="container">
           <img src="<%= person.image %>" class="profilePic">
           <h3><%= person.name %></h3>
-          <p><%= person.description %></p>
+          <h4><%= person.summary %></h4>
 
-          <ul class="list-inline social-buttons">
-            <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a> </li>
-          </ul>
+          <div class="person_modal">
+              <p> <%= person.description %> </p>
+              <ul class="list-inline social-buttons">
+                <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a> </li>
+              </ul>
+          </div>
 
         </div>
       </div>
