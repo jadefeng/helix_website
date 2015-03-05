@@ -4,69 +4,19 @@
       <div class="intro-lead-in">Helix Technologies Australia</div>
       <div class="intro-heading">A unique federation of highly skilled and experienced engineers. 
       	<br>
-      	<a href="#services" class="page-scroll btn btn-xl"><i class="fa fa-angle-double-down fa-4x"></i></a> 
+      	<a href="#clients" class="page-scroll btn btn-xl"><i class="fa fa-angle-double-down fa-4x"></i></a> 
       </div>
   </div>
 </header>
 
-<section id="services">
-  <div class="container">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">Services</h2>
-        <div class="line"></div>
-      </div>
-    <div class="row text-center services">
-      <div class="col-md-3"> <span class="fa-stack fa-4x"> <i class="fa fa-circle fa-stack-2x text-primary"></i> <i class="fa fa-tablet fa-stack-1x services-icon"></i> </span>
-        <h4 class="service-heading">Lorum Ipsum </h4>
-        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-      </div>
-      <div class="col-md-3"> <span class="fa-stack fa-4x"> <i class="fa fa-circle fa-stack-2x text-primary"></i> <i class="fa fa-html5 fa-stack-1x services-icon"></i> </span>
-        <h4 class="service-heading">Lorum Ipsum</h4>
-        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-      </div>
-      <div class="col-md-3"> <span class="fa-stack fa-4x"> <i class="fa fa-circle fa-stack-2x text-primary"></i> <i class="fa fa-desktop fa-stack-1x services-icon"></i> </span>
-        <h4 class="service-heading">Lorum Ipsum</h4>
-        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-      </div>
-      <div class="col-md-3"> <span class="fa-stack fa-4x"> <i class="fa fa-circle fa-stack-2x text-primary"></i> <i class="fa fa-cogs fa-stack-1x services-icon"></i> </span>
-        <h4 class="service-heading">Lorum Ipsum</h4>
-        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section id="team" class="bg-light-gray">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <a href="/people"><h2 class="section-heading">Team</h2></a>
-        <div class="line"></div>
-      </div>
-    </div>
-    <% @people.each do |person| %>
-      <div class="col-sm-3">
-        <div class="team-member"> <img src="<%= person.image %>" class="img-responsive img-circle" alt="">
-          <h4><%= person.name %></h4>
-          <ul class="list-inline social-buttons">
-            <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a> </li>
-          </ul>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</section>
-
 <section id="clients">
-  <div class="container">
-      <div class="col-lg-12 text-center">
-        <a href="/projects"><h2 class="section-heading">Portfolio</h2></a>
-        <div class="line"></div>
-    </div>
     <% @projects.each do |project| %>
+    <div class="project_box" style="background-image: url(<%= project.background_image %>)">
         <img src="<%= project.image %>" class="project_logo">
+        <p><%= project.summary %> </p>
+        <br><br>
+        <a href="/projects/<%= project.id %>" class="button">More</a>
+    </div>
     <% end %>
-  </div>  
+    <br>
 </section>
