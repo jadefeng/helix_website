@@ -1,5 +1,9 @@
-<h1>New Person</h1>
+<% if @current_user %>
 
-<%= render 'form' %>
+	<h1>New Person</h1>
 
-<%= link_to 'Back', people_path %>
+	<%= render 'form' %>
+
+	<%= link_to 'Back', people_path %>
+
+<% end %>

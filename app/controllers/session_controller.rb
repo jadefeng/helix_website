@@ -8,7 +8,6 @@ class SessionController < ApplicationController
 		user = User.where(:name => params[:name].downcase).first
 		if user.present? && (user.authenticate params[:password]) 
 			session[:user_id] = user.id
-			raise params
 			redirect_to user_path(user)
 		else
 			redirect_to login_path

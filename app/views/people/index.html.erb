@@ -1,4 +1,4 @@
-<header>
+<header class="team_header">
   <div class="container">
     <div class="intro-text">
       <h1>The Team</h1>
@@ -6,25 +6,29 @@
   </div>
 </header>
 <br><br>
+<div class="container">
+    <img class="logo" src="assets/helixLogo.png">
+    <br>
     <% @people.each do |person| %>
       <div class="person_box">
-        <div class="container">
-          <img src="<%= person.image %>" class="profilePic">
-          <h3><%= person.name %></h3>
-          <h4><%= person.summary %></h4>
+          <img src="assets/<%= person.image %>" class="profilePic">
+          <h3><span class="emphasis"><%= person.name %></span></h3>
+          <p><%= person.summary %></p>
+            <!--   <ul class="list-inline social-buttons">
+                <li><a href="<%= person.twitter %>"><i class="fa fa-twitter"></i></a> </li>
+                <li><a href="<%= person.linkedin %>"><i class="fa fa-linkedin"></i></a> </li>
+              </ul> -->
 
-          <div class="person_modal">
-              <p> <%= person.description %> </p>
-              <ul class="list-inline social-buttons">
-                <li><a href="#"><i class="fa fa-twitter"></i></a> </li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a> </li>
-              </ul>
-          </div>
+      <% if @current_user %>
+        <%= link_to 'Edit Person', edit_person_path(person) %>
+      <% end %>
 
-        </div>
       </div>
     <% end %>
 
 <br>
 
-<%= link_to 'New Person', new_person_path %>
+<% if @current_user %>
+  <%= link_to 'New Person', new_person_path %>
+<% end %>
+</div>

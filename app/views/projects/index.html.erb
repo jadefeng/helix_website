@@ -10,7 +10,7 @@
 <div class="container">
 <% @projects.each do |project| %>
       <div class="col-md-6 col-sm-6 portfolio-item">
-        <img src="<%= project.image %>" class="img-responsive"> </a>
+        <img src="/assets/case_studies/<%= project.image %>" class="project_index_logo"> </a>
         <div class="portfolio-caption">
           <h4><%= project.name %></h4>
           <p class="text-muted"><%= project.description %></p>
@@ -20,6 +20,3 @@
 <% end %>
 </div>
 
-<br>
-
-<%= link_to 'New Project', new_project_path %>

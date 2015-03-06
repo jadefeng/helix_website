@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20150305220050) do
     t.text     "summary"
     t.string   "image"
     t.text     "description"
+    t.string   "linkedin"
+    t.string   "twitter"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -28,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150305220050) do
     t.string   "image"
     t.text     "description"
     t.string   "background_image"
+    t.string   "background_color"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

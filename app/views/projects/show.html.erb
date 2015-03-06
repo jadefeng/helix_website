@@ -1,7 +1,6 @@
-<header style="background: url('<%= @project.image %>'); background-size: cover">
+<header style="background: url('/assets/case_studies/<%= @project.image %>') center; background-size: cover">
   <div class="container">
     <div class="intro-text">
-      <h1><%= @project.name %></h1>
     </div>
   </div>
 </header>
@@ -9,6 +8,8 @@
 <br>
 
 <div class="container">
+      <h1><span class="emphasis"><%= @project.name %> </span> </h1>
+
 	<p>
 	  <%= @project.description %>
 	</p>

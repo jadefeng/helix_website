@@ -1,18 +1,30 @@
-<header>
+<header class="home_header">
   <div class="container">
     <div class="intro-text">
-      <div class="intro-lead-in">Helix Technologies Australia</div>
-      <div class="intro-heading">A unique federation of highly skilled and experienced engineers. 
-      	<br>
-      	<a href="#clients" class="page-scroll btn btn-xl"><i class="fa fa-angle-double-down fa-4x"></i></a> 
+      <div class="intro-lead-in">We are ...</div>
+      <div class="intro-heading">A unique federation of <span class="unique">highly skilled</span> and <span class="unique">experienced engineers</span>. 
       </div>
   </div>
 </header>
 
+<section id="summary">
+  <div class="container">
+
+    <img class="logo" src="assets/helixLogo.png">
+    <br>
+    <h1><span class="emphasis">WE BUILD PRODUCTS AND SUPERCHARGE STARTUPS.</span></h1>
+    <br>
+    <p>We provide a ready-made team of the world's best developers for companies in need. We assist both well-established companies and bootstrap tech startups. Our skill-set and experience encompass an enormous breadth of technologies, and we take every opportunity to tackle new challenges. 
+
+    <br><br>Say <a href="mailto:hello@helixta.com.au">hello</a> and tell us about your awesome project.</p>
+    </div>
+</section>
+
 <section id="clients">
     <% @projects.each do |project| %>
-    <div class="project_box" style="background-image: url(<%= project.background_image %>)">
-        <img src="<%= project.image %>" class="project_logo">
+    <div class="project_box" style="background-color: <%= project.background_color %>">
+        <img src="assets/case_studies/<%= project.image %>" class="project_logo">
+        <br><br>
         <p><%= project.summary %> </p>
         <br><br>
         <a href="/projects/<%= project.id %>" class="button">More</a>

@@ -5,6 +5,8 @@ class CreatePeople < ActiveRecord::Migration
       t.text :summary
       t.string :image
       t.text :description
+      t.string :linkedin
+      t.string :twitter 
 
       t.timestamps null: false
     end

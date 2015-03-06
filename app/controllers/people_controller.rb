@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
-
+  before_action :check_login, :except => [:index, :show]
   # GET /people
   # GET /people.json
   def index

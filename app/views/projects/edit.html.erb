@@ -1,6 +1,10 @@
-<h1>Editing Project</h1>
+<% if @current_user %>
 
-<%= render 'form' %>
+	<h1>Editing Project</h1>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+	<%= render 'form' %>
+
+	<%= link_to 'Show', @project %> |
+	<%= link_to 'Back', projects_path %>
+
+<% end %>

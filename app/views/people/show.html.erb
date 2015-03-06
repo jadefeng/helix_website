@@ -1,14 +1,16 @@
-<p id="notice"><%= notice %></p>
+<% if @current_user %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @person.name %>
-</p>
+	<p>
+	  <strong>Name:</strong>
+	  <%= @person.name %>
+	</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @person.description %>
-</p>
+	<p>
+	  <strong>Description:</strong>
+	  <%= @person.description %>
+	</p>
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+	<%= link_to 'Edit', edit_person_path(@person) %> |
+	<%= link_to 'Back', people_path %>
+
+<% end %>

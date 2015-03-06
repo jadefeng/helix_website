@@ -6,23 +6,28 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
-    <span class="navbar-header page-scroll"><a class="navbar-brand page-scroll" href="/">Helix</a></span> 
+    <span class="navbar-header page-scroll">
+    <a href="/"><img class="header_logo" src="/assets/transparent_logo.gif"></a>
+    <a class="navbar-brand page-scroll" href="/">Helix </span> 
     
       <ul class="nav navbar-nav navbar-right">
         <li class="hidden"> <a href="#page-top"></a> </li>
-        <li> <a class="page-scroll" href="/projects">Case Studies</a> </li>
-        <li> <a class="page-scroll" href="/people">People</a> </li>
-        <li> <a class="page-scroll" href="/about">About</a> </li>
+        <!-- <li> <a class="page-scroll" href="/projects">Case Studies</a> </li> -->
+        <li> <a class="page-scroll" href="/people">Team</a> </li>
+        <li> <a class="page-scroll" href="/about">Join</a> </li>
         <li> <a class="page-scroll" href="/contact">Contact</a> </li>
-        <li>  <%= link_to('Sign out', login_path, :method => :delete, :data => {:confirm => "Are you sure?"})  %></li> " 
+        <% if @current_user %>
+          <li>  <%= link_to('Sign out', login_path, :method => :delete, :data => {:confirm => "Are you sure?"})  %></li> 
+        <% end %> 
 
-      </ul>
+    </ul>
   </div>
   <!-- /.container-fluid --> 
 </nav>
@@ -30,6 +35,17 @@
 
 
 	<%= yield %>
+
+<footer>
+  <div class="container">
+        <span class="copyright">&copy; 2015 Helix Technologies Australia Pty Ltd</span> 
+        <p> ABN 32 149 439 261   |   ACN 149 439 261 </p>
+        <ul class="list-inline social-buttons">
+          <li><a href="https://twitter.com/HelixTA"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="http://www.linkedin.com/company/helix-technologies-australia"><i class="fa fa-linkedin"></i></a> </li>
+        </ul>
+  </div>
+</footer>
 
 </body>
 </html>
