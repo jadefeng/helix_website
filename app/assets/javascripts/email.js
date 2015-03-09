@@ -18,7 +18,7 @@ $(document).ready( function() {
               "from_email": email,
               "to": [
                   {
-                    "email": "jade@helixta.com.au",
+                    "email": "hello@helixta.com.au",
                     "name": "Helix",
                     "type": "to"
                   }
