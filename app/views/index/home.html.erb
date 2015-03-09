@@ -33,7 +33,7 @@
         <% @people.each do |person| %>
         <li>
           <div class='headshot'>
-            <img src="/assets/people/<%= person.image %>">
+            <img src="<%= person.image %>">
           </div>
           <h3 class='name'> <%= person.name %> </h3>
           <p>
@@ -69,7 +69,7 @@
               <div class='content'>
 
                 <a href="<%= project.url %>" target='_blank'>
-                <img src='/assets/case_studies/<%= project.image %>' class="logo_box" />
+                <img src='<%= project.image %>' class="logo_box" />
                 </a>
               </div>
             </div>
