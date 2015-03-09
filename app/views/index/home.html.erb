@@ -1,34 +1,187 @@
-<header class="home_header">
-  <div class="container">
-    <div class="intro-text">
-      <div class="intro-lead-in">We are ...</div>
-      <div class="intro-heading">A unique federation of <span class="unique">highly skilled</span> and <span class="unique">experienced engineers</span>. 
+    <!-- By Line -->
+    <section class='byline'>
+      <div class='row'>
+        <div class='large-9 columns large-centered about-us'>
+
+          <span id='txt-helix-is'>Helix is:</span>
+          <h2>
+            A 
+            <span id='txt-unique-federation'>unique federation</span> of highly 
+            <span id='txt-skilled'>skilled</span> and 
+            <span id='txt-experienced'>experienced</span> engineers.  
+          </h2>
+          <h3>
+            We build products and supercharge startups.
+          </h3>
+
+          <p>We provide a ready-made team of the world's best developers for companies in need. We assist both well-established companies and bootstrap tech startups. Our skill-set and experience encompass an enormous breadth of technologies, and we take every opportunity to tackle new challenges.  <a href='#contact'>Say hello</a> and tell us about your awesome project.</p>
+        </div>
       </div>
-  </div>
-</header>
+    </section>
 
-<section id="summary">
-  <div class="container">
 
-    <img class="logo" src="assets/helixLogo.png">
-    <br>
-    <h1><span class="emphasis">WE BUILD PRODUCTS AND SUPERCHARGE STARTUPS.</span></h1>
-    <br>
-    <p>We provide a ready-made team of the world's best developers for companies in need. We assist both well-established companies and bootstrap tech startups. Our skill-set and experience encompass an enormous breadth of technologies, and we take every opportunity to tackle new challenges. 
+    <a name='people'></a>
+    <section class='people row'>
+      <h2 class='section-heading'>Our Team</h2>
+      <% if @current_user %>
+        <div class="new_entry"> 
+          <%= link_to 'Add New Person', new_person_path %>
+        </div>
+      <% end %>
 
-    <br><br>Say <a href="mailto:hello@helixta.com.au">hello</a> and tell us about your awesome project.</p>
-    </div>
-</section>
+      <ul class='large-block-grid-4'>
+        <% @people.each do |person| %>
+        <li>
+          <div class='headshot'>
+            <img src="/assets/people/<%= person.image %>">
+          </div>
+          <h3 class='name'> <%= person.name %> </h3>
+          <p>
+            <%= person.summary %>
+          </p>
+          <% if @current_user %>
+            <%= link_to 'Edit', edit_person_path(person) %> | 
+            <%=link_to "Delete", person_path(person), :method => :delete, :class => "delete", :confirm => "Are you sure ?" %>  
 
-<section id="clients">
-    <% @projects.each do |project| %>
-    <div class="project_box" style="background-color: <%= project.background_color %>">
-        <img src="assets/case_studies/<%= project.image %>" class="project_logo">
-        <br><br>
-        <p><%= project.summary %> </p>
-        <br><br>
-        <a href="/projects/<%= project.id %>" class="button">More</a>
-    </div>
-    <% end %>
-    <br>
-</section>
+
+          <% end %>
+        </li>
+        <% end %> 
+      </ul>
+    </section>
+
+    <a name='clients'></a>
+    <section class='clients'>
+      <h2 class='section-heading'>Clients</h2>
+      <p>We've worked with some big names - and some new ones!</p>
+      <% if @current_user %>
+        <div class="new_entry"> 
+          <%= link_to 'Add New Client', new_project_path %> 
+          <br><br>
+        </div>
+      <% end %>
+
+      <div class='row'>
+        <ul class='large-block-grid-3'>
+          <% @projects.each do |project| %>
+            <li>
+            <div class='position'>
+              <div class='content'>
+
+                <a href="<%= project.url %>" target='_blank'>
+                <img src='/assets/case_studies/<%= project.image %>' class="logo_box" />
+                </a>
+              </div>
+            </div>
+            <% if @current_user %>
+              <br>
+              <%= link_to 'Edit', edit_project_path(project) %> | 
+              <%=link_to "Delete", project_path(project), :method => :delete, :class => "delete", :confirm => "Are you sure ?" %>  
+            <% end %>
+
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </section>
+
+    <a name='jobs'></a>
+    <section class='jobs'>
+      <h2 class='section-heading'>Join Us!</h2>
+      <p>Interesting projects, great team, when you want.</p>
+      <div class='row'>
+        <div class='large-4 columns geography'>
+          <p>Job opportunities:</p>
+          <ul>
+            <li class='sydney'>
+              <span class='icon icon-map-marker'> <i class="fa fa-map-marker"></i> </span>
+              <span>Sydney, Australia</span>
+            </li>
+            <li class='greece'>
+              <span class='icon icon-map-marker'> <i class="fa fa-map-marker"></i> </span>
+              { <span>Your location</span> }
+            </li>
+          </ul>
+        </div>
+
+        <div class='large-8 columns description'>
+          <ul>
+            <li>
+              <h4>Great team:</h4> 
+              <p>
+                We're a group with great skills and diverse backgrounds,
+                always seeking out the most interesting and promising 
+                projects, whether in-house or in collaboration with
+                other startups.
+              </p>
+            </li>
+            
+            <li>
+              <h4>Flexible work environment:</h4> 
+              <p>
+                Work wherever you want. Office, home, the beach or your local cafe;
+                as a group or individually; part time or full time. Whatever works best
+                for you and keeps you productive.
+              </p>
+            </li>
+
+            <li>
+              <h4>Projects:</h4> 
+              <p>
+                We have a wide variety of interesting projects in the pipeline. 
+                We'd love to hear about what you want to work on, or even propose
+                the next Helix project.
+              </p>
+            </li>
+            
+            <li>
+              <h4>Development and learning:</h4> 
+              <p>
+                We use a very broad range of technologies and are
+                working on a large variety of products. We're eager
+                to try new things and are always open minded. Our engineers pride
+                themselves on always sharpening their saw.  At Helix you'll find
+                great support and a team with a wealth of experience to draw on while
+                you're building something great. You'll be hard pressed to find a
+                place with so much going on in a small team culture.
+              </p>
+            </li>
+
+            
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  
+    
+      <section class='contact' id="contact">
+        
+        <h2 class='section-heading'>Contact Us!</h2>
+        <p id="after_email"></p>
+        <br>
+
+     <div class="container">
+      <div class="col-lg-12">
+        <form name="sentMessage" id="contactForm" method="POST">
+          <div class="row">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+              </div>
+              <div class="form-group">
+                <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" id="phone" required data-validation-required-message="Please enter your phone number.">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+              </div>
+              <button type="submit" class="email_submit">Send Message</button>
+          </div>
+          <br><br>
+        </form>
+      </div>
+
+
+      </section>

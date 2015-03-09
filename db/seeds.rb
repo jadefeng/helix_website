@@ -91,7 +91,8 @@ Project.create(
   image: "olpc.png",
   background_image: 'http://moblog.net/media/r/a/r/rareaquaticbadger/reflections-in-monochrome.jpg',
   description: "Working with One Education to help bring laptops to children across the world.",
-  background_color: '#25AE92'
+  background_color: '#25AE92',
+  url: 'http://www.one-education.org/'
   )
 
 Project.create(
@@ -102,7 +103,8 @@ Project.create(
   background_image: 'http://moblog.net/media/r/a/r/rareaquaticbadger/reflections-in-monochrome.jpg',
   description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." ,
-  background_color: '#C45E4F'
+  background_color: '#C45E4F',
+  url: 'https://www.dropbox.com/'
   )
 
 Project.create(
@@ -113,7 +115,8 @@ Project.create(
   background_image: 'http://moblog.net/media/r/a/r/rareaquaticbadger/reflections-in-monochrome.jpg',
   description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." , 
-  background_color: '#339760'
+  background_color: '#339760',
+  url: 'https://www.canva.com/'
   )
 
 Project.create(
@@ -124,5 +127,6 @@ Project.create(
   background_image: 'http://moblog.net/media/r/a/r/rareaquaticbadger/reflections-in-monochrome.jpg',
   description: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  background_color: '#44A6C0'
+  background_color: '#44A6C0',
+  url: 'http://www.fusionyearbooks.com/'
   )

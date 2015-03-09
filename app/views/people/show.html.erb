@@ -1,5 +1,4 @@
-<% if @current_user %>
-
+<div class="container">
 	<p>
 	  <strong>Name:</strong>
 	  <%= @person.name %>
@@ -13,4 +12,4 @@
 	<%= link_to 'Edit', edit_person_path(@person) %> |
 	<%= link_to 'Back', people_path %>
 
-<% end %>
+</div>

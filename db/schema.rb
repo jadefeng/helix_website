@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150305220050) do
     t.text     "description"
     t.string   "background_image"
     t.string   "background_color"
+    t.string   "url"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

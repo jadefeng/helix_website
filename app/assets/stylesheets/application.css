@@ -15,227 +15,64 @@
  */
 
 /*navigation bar*/
-
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,400italic);
-
-body {
-  font-family: 'Roboto', sans-serif !important;
-  -webkit-font-smoothing: antialiased;
-}
-
-.navbar {
-  background-color: rgba(72, 72, 72, 0.5);
-}
-
-.unique {
-  color: #fed136;
-}
-
-
-.emphasis {
-  color: #3E8643;
-  font-style: normal;
-  text-align: center;
-}
-
-header {
-    text-align: center;
-    color: #fff;
-    background-attachment: scroll;
-    text-shadow: 1px 1px 1px black;
-}
-
-.home_header {
-  background: url('/assets/background/ivy-wall.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-.contact_header {
-  background: url('/assets/background/parrots.jpg') no-repeat center center fixed;
-  background-size: cover
-}
-
-.about_header {
-  background: url('/assets/background/coffee.jpg') no-repeat center center fixed;
-  background-size: cover
-}
-
-.team_header {
-  background: url('/assets/background/dolphins.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
-
-
-section {
-  overflow: auto;
-  width: 100vw;
-}
-
-.serviceBox {
-  margin: auto 0;
-  text-align: center;
-  display: inline-block;
-  height: 18vw;
-  width: 18vw;
-  border: 1px solid black;
-}
-
-.project_box p {
-  color: white;
-  font-size: 1.2em;
-  text-align: center;
-  bottom: 0;
-}
-
-.project_box img {
-  margin-top: 50px;
-}
-.project_box {
-  color: white;
-  display: block;
-  float: left;
-  font-size: 1.2em;
-  height: 45vw;
-  margin: 0px;
-  min-height: 30vw;
-  padding: 20px;
-  width: 49.2vw;
-  text-align: center;
-}
-
-.project_logo {
-  width: 250px;
-  height: 150px;
+.logo_box {
   width: auto;
-  display: inline-block;
-  margin: 10px;
-  border-radius: 50px;
+  max-height: 100px;
+  margin-top: -20px;
+}
+
+.icon-helix {
+  background-image: url('helixLogo.png');
+}
+
+.new_entry {
+  text-align: center
 }
 
 .container {
   max-width: 960px;
-  margin: auto;
+  margin: 0 auto;
 }
 
-.person_box {
-  height: 300px;
-  width: 48%;
-  display: inline-block;
-  text-align: center;
-  margin-top: 10px;
-  vertical-align: top;
-}
-
-.person_box img {
-  height: 150px;
-  width: 150px;
-  border-radius: 100%;
-}
-
-.person_modal {
-  display:none;
-}
-
-.heading {
-  color: rgb(255, 255, 255);
-  font-size: 40px;
-  font-weight: bold;
-  height: 44px;
-  text-align: center;
-  text-transform: uppercase;
-  width: 900px;
-  line-height: 44px;
-  margin-bottom: 15px;
-  margin-top: 0px;
-}
-
-.header_logo {
-  float:left ;
-  margin-right: 20px;
-}
-
-.logo {
-  text-align: center;
-  display: block; 
-  margin: auto;
-  height: 80px;
-  width: 80px;
-  border-radius: 100%;
-}
-
-.button {
-  background-clip: border-box;
-  background: none;
-  border: 3px solid rgb(255, 255, 255);
-  box-sizing: border-box;
-  color: white;
-  cursor: pointer;
-  font-size: 1.2em;
-  font-style: italic;
-  height: 51px;
-  margin: 20px;
-  padding-bottom: 11px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 11px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition-delay: 0s;
-  transition-duration: 0.3s;
-  transition-property: all;
-  transition-timing-function: ease;
-  width: 146.625px;
-}
-
-.button:visited {
-  color: white;
-}
-
-.button:hover {
-  background-color: white;
-  color: black;
-  text-decoration: none;
-}
-
-#summary {
-  text-align: center 
-}
-
-#summary h1 {
-  color: black;
-  text-transform: initial;
-}
-
-#summary p {
-  font-size: 18px;
+.container textarea {
+  width: 100%;
+  height: 100px;
   font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  padding-left: 10px;
+  border-radius: 10px;
+  word-spacing: 0px;
   font-style: normal;
+  font-variant: normal;
   font-weight: 300;
-  height: 108px;
 }
 
-#summary a, a:visited {
-  text-decoration: none;
-  color: black;
+.container input {
+  border-radius: 10px;
 }
 
-#about h2 {
-  color: black;
+.email_submit {
+  border: 1px solid white;
+  box-sizing: border-box;
+  color: rgb(244, 249, 251);
+  background: none;
+  display: block;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 60px;
+  margin: 10px auto;
+  padding: 20px 40px;
+  text-align: center;
+  width: 300px;
+  border-radius: 10px;
 }
 
-#summary .container {
-  max-width: 900px;
+input {
+  margin-bottom: 10px;
 }
 
-footer {
-  height: 200px;
-  padding-top: 70px;
-}
-
-.project_index_logo {
-  width: 50%;
-  height: auto;
-  margin: auto;
+#after_email {
+  color: white;
 }
