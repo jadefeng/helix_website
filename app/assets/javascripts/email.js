@@ -18,13 +18,13 @@ $(document).ready( function() {
               "from_email": email,
               "to": [
                   {
-                    "email": "tim@helixta.com.au",
+                    "email": "jade@helixta.com.au",
                     "name": "Helix",
                     "type": "to"
                   }
                 ],
               "subject": "Helixta Contact - Website",
-              "text": message,
+              "html": "<h3>From: " + name + " (" + phone + ") </h3> <p>" + message + "</p>" ,
             }
           }
          }).done(function(response) {
